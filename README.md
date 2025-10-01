@@ -2,7 +2,7 @@
 
 > Mario & Luigi: Desentupindo desafios, liberando soluções! 🔧
 
-![GitHub repo size](https://github.com/EmanuelRamos22/Projeto-DevClub)
+Link do Repositório: https://github.com/EmanuelRamos22/Projeto-DevClub
 
 ---
 
@@ -69,4 +69,5 @@
 ---
 
 👨‍💻 Desenvolvido por **Emanuel Ramos**
+
 

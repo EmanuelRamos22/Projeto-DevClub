@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+button {
+  color: white;
+  background-color: #c51111;
+  border-radius: 3px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.imagem-mario-luigi {
+  height: 500px;
+}
+
+body {
+  height: 100vh;
+}
+
+.caixa-mae {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+  height: 100vh;
+}
+
+.caixa-principal {
+  width: 40%;
+}
+
+.caixa-video {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+video {
+  min-height: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.mascara {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+  position: fixed;
+  top: 0;
+}
+
+.zap img {
+  height: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* deixa em Bold */
+}
+
+.header {
+  display: flex;
+  flex-direction: row; /* horizontal */
+  align-items: center; /* centraliza verticalmente */
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 30px; /* espaço entre logo e links */
+  margin: 30px 0;
+  flex-wrap: nowrap;
+}
+
+.header img {
+  height: 50px;
+  flex-shrink: 0; /* evita que a logo encolha em telas menores */
+}
+
+.header a {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  transition: 0.3s ease-in-out; /* adiciona suavidade no hover */
+}
+
+.header a:hover {
+  color: #c51111;
+  font-size: 22px;
+}
+button:hover {
+  width: 225px;
+  height: 55px;
+  transition: 0.2s ease-in-out;
+  background-color: #e93737;
+}
+
+.formu {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  left: 50;
+  padding: 30px;
+  border-radius: 5px;
+  top: 40%;
+  left: -320px;
+  font-family: "Poppins", sans-serif;
+  transition: left 1s ease-in-out;
+}
+
+input {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: #c51111;
+}
+
+textarea {
+  width: 270px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding-left: 5px;
+  outline-color: #c51111;
+}
+
+.mascara-form {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: visibility 0.5s ease-in-out;
+
+  background: linear-gradient(
+    109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%
+  );
+}
+/*
+posição do form para o JS
+inicial
+top: 30%;
+left: -300px;
+
+final
+top: 30%;
+left: 50%;
+transform: translateX(-50%);
+*/
+
+/* Responsividade para telas menores */
+/* ========================================
+   RESPONSIVO PARA TELAS ATÉ 1100px
+   ======================================== */
+@media (max-width: 1100px) {
+  body {
+    font-size: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .header a {
+    font-size: 18px;
+  }
+
+  .caixa-mae {
+    flex-direction: column;
+    padding: 40px 20px;
+    height: auto;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .caixa-principal {
+    width: 90%;
+  }
+
+  .caixa-principal p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .logo {
+    height: 150px;
+    margin-bottom: 15px;
+  }
+
+  .imagem-mario-luigi {
+    height: 300px;
+  }
+
+  button {
+    width: 180px;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  button:hover {
+    width: 200px;
+    height: 50px;
+  }
+
+  .zap img {
+    height: 50px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .formu {
+    width: 90%;
+    left: -100%;
+    top: 25%;
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   RESPONSIVO PARA TABLETS (até 768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .header a {
+    font-size: 16px; /* diminui fonte para caber melhor */
+  }
+  .header {
+    gap: 15px; /* reduz espaçamento entre os links */
+  }
+
+  .caixa-principal p {
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 120px;
+  }
+
+  .imagem-mario-luigi {
+    height: 250px;
+  }
+
+  button {
+    width: 160px;
+    height: 40px;
+    font-size: 13px;
+  }
+
+  button:hover {
+    width: 180px;
+    height: 45px;
+  }
+}
+
+/* ========================================
+   RESPONSIVO PARA CELULARES (até 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .header {
+    gap: 8px;
+  }
+
+  .header a {
+    font-size: 14px;
+  }
+
+  .caixa-principal p {
+    font-size: 13px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .imagem-mario-luigi {
+    height: 180px;
+  }
+
+  button {
+    width: 140px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  button:hover {
+    width: 160px;
+    height: 40px;
+  }
+
+  .caixa-mae {
+    padding: 20px 10px;
+  }
+}

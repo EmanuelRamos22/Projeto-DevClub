@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Irmãos Mário</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/logo-header.png" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="/img/logo-header.png" alt="logo mario" />
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Nossos Serviços</a>
+      <a href="https://w.app/tcofwb">Fale Conosco</a>
+    </div>
+
+    <div class="caixa-mae">
+      <div class="caixa-principal">
+        <img src="./img/logo.png" alt="logo" class="logo" />
+        <p class="texto1">
+          Mario & Luigi: Desentupindo desafios, liberando soluções!
+        </p>
+        <br />
+        <p>
+          🔧Você já se encontrou em uma situação de emergência com encanamento?
+          Um cano estourado, um vazamento inesperado ou aquele entupimento que
+          parece nunca ter fim?🔧<br />
+          Nessas horas, cada minuto conta — e é aí que entram Mario & Luigi, os
+          encanadores que resolvem seus problemas com agilidade, técnica e um
+          toque único de estilo. Seja uma emergência ou uma manutenção
+          preventiva, estamos prontos para cuidar do seu encanamento e devolver
+          a tranquilidade para sua casa ou empresa. <br />
+          <br />
+          Não espere o problema aumentar: chame Mario & Luigi e deixe que a
+          gente resolva para você!
+        </p>
+
+        <button onclick="cliqueiNoBotao()">Entre em Contato</button>
+      </div>
+
+      <div>
+        <img
+          src="./img/mario.png"
+          alt="logo mario e luigi"
+          class="imagem-mario-luigi"
+        />
+      </div>
+    </div>
+
+    <div class="caixa-video">
+      <video
+        src="/img/video.mp4"
+        alt="video de fundo"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="mascara"></div>
+    </div>
+
+    <a href="https://w.app/tcofwb" target="_blank" class="zap"
+      ><img src="/img/whatsapp.png" alt="Link Zap"
+    /></a>
+
+    <div onclick="cliqueiNaMascara()" class="mascara-form"></div>
+
+    <form
+      class="formu"
+      action="https://formcarry.com/s/VTVF4aXfnWB"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <h3>Fale Conosco</h3>
+
+      <input placeholder="Nome Completo" type="text" name="nome" />
+      <input placeholder="Seu Telefone" type="tel" name="telefone" />
+      <textarea
+        placeholder="Digite seu problema aqui..."
+        name="duvida"
+      ></textarea>
+      <button type="submit">Pedir Orçamento</button>
+    </form>
+  </body>
+  <script src="scripts.js"></script>
+</html>
